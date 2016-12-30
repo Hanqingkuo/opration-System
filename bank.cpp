@@ -103,15 +103,13 @@ bool Safe(Stat &s)
     }
     bool possible = true;
     int k = 0;
+    cout<<"show work\n";
     while(possible)
     {
 
         for(i = 0; i < s.processCount; ++i)
         {
-            for(int m = 0; m < s.sourceCount; ++m)
-            {
-
-            }
+            
             if(finish[i] == true)
             {
                 ++k;
@@ -127,12 +125,8 @@ bool Safe(Stat &s)
                 }
                 if(j == s.sourceCount)
                 {
-                    cout<<"show work:\n";
-                    for(int m = 0; m < s.sourceCount; ++m)
-                    {
-                        cout<<work[m]<<"   ";
-                    }
-                    cout<<"\n";
+                   
+                   
                     finish[i] = true;
                     for(int m = 0; m < s.sourceCount; ++m)
                     {
@@ -144,7 +138,12 @@ bool Safe(Stat &s)
                 {
                     ++k;
                     continue;
+                } 
+		for(int m = 0; m < s.sourceCount; ++m)
+                {
+                     cout<<work[m]<<"   ";
                 }
+                cout<<"\n";
                 
             }
 
